@@ -1,25 +1,29 @@
 
-    #🧾 Expense Tracker API
+# 🧾 Expense Tracker API
 
-    A simple and secure <strong>Expense Tracker REST API</strong> built with <code>Node.js</code>,
-        <code>Express</code>, and <code>MongoDB</code>. It allows users to manage their personal expenses by performing
-        CRUD operations with authentication.
+A simple and secure **Expense Tracker REST API** built with `Node.js`, `Express`, and `MongoDB`. It allows users to manage their personal expenses by performing CRUD operations with authentication.
 
-    #📌 Features
-    🔐 User authentication (JWT)
-    ➕ Add, edit, delete expenses
-     📊 Get expenses by category, date range, or user
-     📈 Calculate total, average, and price range
-     📁 MongoDB aggregation support
-     📦 RESTful API structure
-    </ul>
+---
 
-    #🚀 Tech Stack
-    Backend: Node.js, Express.js
-    Database: MongoDB + Mongoose
-    Authentication: JWT
+## 📌 Features
 
-    #📁 Project Structure
+- 🔐 User authentication (JWT)
+- ➕ Add, edit, delete expenses
+- 📊 Get expenses by category, date range, or user
+- 📈 Calculate total, average, and price range
+- 📁 MongoDB aggregation support
+- 📦 RESTful API structure
+
+---
+
+## 🚀 Tech Stack
+
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB + Mongoose
+- **Authentication:** JWT
+- **Validation:** express-validator or Joi (optional)
+
+---
     <code>expense-tracker/
 ├── controllers/
 │   └── expenseController.js
