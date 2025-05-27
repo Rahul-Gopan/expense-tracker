@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expense Tracker API - README</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 12px 16px;
+            overflow-x: auto;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧾 Expense Tracker API</h1>
+
+    <p>A simple and secure <strong>Expense Tracker REST API</strong> built with <code>Node.js</code>,
+        <code>Express</code>, and <code>MongoDB</code>. It allows users to manage their personal expenses by performing
+        CRUD operations with authentication.</p>
+
+    <hr />
+
+    <h2>📌 Features</h2>
+    <ul>
+        <li>🔐 User authentication (JWT)</li>
+        <li>➕ Add, edit, delete expenses</li>
+        <li>📊 Get expenses by category, date range, or user</li>
+        <li>📈 Calculate total, average, and price range</li>
+        <li>📁 MongoDB aggregation support</li>
+        <li>📦 RESTful API structure</li>
+    </ul>
+
+    <h2>🚀 Tech Stack</h2>
+    <ul>
+        <li><strong>Backend:</strong> Node.js, Express.js</li>
+        <li><strong>Database:</strong> MongoDB + Mongoose</li>
+        <li><strong>Authentication:</strong> JWT</li>
+        <li><strong>Validation:</strong> express-validator or Joi (optional)</li>
+    </ul>
+
+    <h2>📁 Project Structure</h2>
+    <pre><code>expense-tracker/
+├── controllers/
+│   └── expenseController.js
+├── database/
+│   └── db.js
+├── middlewares/
+│   └── authMiddleware.js
+├── models/
+|   ├── User.js
+│   └── Expense.js
+├── public/
+│   └── index.js
+├── routes/
+│   ├── authRoute.js
+│   └── expenseRoute.js
+├── .env
+├── .gitignore
+├── server.js
+├── package.json
+└── README.md
+</code></pre>
+
+    <h2>⚙️ Installation</h2>
+    <pre><code># Clone the repository
+git clone https://github.com/your-username/expense-tracker.git
+cd expense-tracker
+
+# Install dependencies
+npm install
+
+# Create a .env file and add your environment variables
+touch .env
+</code></pre>
+
+    <h2>🛠️ Environment Variables</h2>
+    <pre><code>PORT=3000
+MONGODB_URI=mongodb://localhost:PORT/expense-tracker
+JWT_SECRET=your_jwt_secret
+</code></pre>
+
+    <h2>▶️ Run the Project</h2>
+    <pre><code># Start the server
+npm run dev
+</code></pre>
+    <p>The server will start at <code>http://localhost:3000</code>.</p>
+
+    <h2>🛣️ API Endpoints</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Endpoint</th>
+                <th>Description</th>
+                <th>Protected</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>POST</td>
+                <td>/api/auth/register</td>
+                <td>Register a new user</td>
+                <td class="text-center">❌</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/api/auth/login</td>
+                <td>Login and get JWT token</td>
+                <td class="text-center">❌</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/expense/</td>
+                <td>Get all expenses for user</td>
+                <td class="text-center">✅</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/expense/analysis</td>
+                <td>Get analysis of expenses for user</td>
+                <td class="text-center">✅</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/api/expense/getExpense/:id</td>
+                <td>Get single expenses for user</td>
+                <td class="text-center">✅</td>
+            </tr>
+            
+            <tr>
+                <td>POST</td>
+                <td>/api/expense/</td>
+                <td>Add a new expense</td>
+                <td class="text-center">✅</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/api/expense/:id</td>
+                <td>Update an expense</td>
+                <td class="text-center">✅</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/api/expense/:id</td>
+                <td>Delete an expense</td>
+                <td class="text-center">✅</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>🔒 Authentication</h2>
+    <p>Use the JWT token returned on login as a <code>Bearer Token</code> in the <code>Authorization</code> header for
+        all protected routes:</p>
+    <pre><code>Authorization: Bearer &lt;your-token&gt;</code></pre>
+
+    <h2>🧪 Sample Expense Object</h2>
+    <pre><code>{
+  title: "Apple",
+  category: "Food",
+  amount: 250,
+  date: "2025-05-26"
+}
+</code></pre>
+
+    <h2>🧑‍💻 Contributing</h2>
+    <p>Contributions are welcome! Please fork the repository and submit a pull request.</p>
+
+    <h2>📄 License</h2>
+    <p>This project is licensed under the MIT License.</p>
+
+</body>
+
+</html>
