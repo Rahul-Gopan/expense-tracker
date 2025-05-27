@@ -24,132 +24,83 @@ A simple and secure **Expense Tracker REST API** built with `Node.js`, `Express`
 - **Validation:** express-validator or Joi (optional)
 
 ---
-    <code>expense-tracker/
-├── controllers/
-│   └── expenseController.js
-├── database/
-│   └── db.js
-├── middlewares/
-│   └── authMiddleware.js
-├── models/
-|   ├── User.js
-│   └── Expense.js
-├── public/
-│   └── index.js
-├── routes/
-│   ├── authRoute.js
-│   └── expenseRoute.js
-├── .env
-├── .gitignore
-├── server.js
-├── package.json
-└── README.md
-</code>
+## 📁 Project Structure
+expense-tracker/
+    ├── controllers/
+    │   └── expenseController.js
+    ├── database/
+    │   └── db.js
+    ├── middlewares/
+    │   └── authMiddleware.js
+    ├── models/
+    |   ├── User.js
+    │   └── Expense.js
+    ├── public/
+    │   └── index.js
+    ├── routes/
+    │   ├── authRoute.js
+    │   └── expenseRoute.js
+    ├── .env
+    ├── .gitignore
+    ├── server.js
+    ├── package.json
+    └── README.md
 
-    #⚙️ Installation
-    <code># Clone the repository
+
+## ⚙️ Installation
+
+```bash
+# Clone the repository
 git clone https://github.com/your-username/expense-tracker.git
 cd expense-tracker
 
 # Install dependencies
 npm install
 
-# Create a .env file and add your environment variables
-touch .env
-</code>
+## 🛠️ Environment Variables
 
-    #🛠️ Environment Variables
-    <code>PORT=3000
-MONGODB_URI=mongodb://localhost:PORT/expense-tracker
+Create a `.env` file in the root directory and add the following:
+
+```env
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/expense-tracker
 JWT_SECRET=your_jwt_secret
-</code>
 
-    #▶️ Run the Project
-    <code># Start the server
+## ▶️ Run the Project
+# Start the server
 npm run dev
-The server will start at <code>http://localhost:3000
-</code>
 
-    #🛣️ API Endpoints
-    <table>
-        <thead>
-            <tr>
-                <th>Method</th>
-                <th>Endpoint</th>
-                <th>Description</th>
-                <th>Protected</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>POST</td>
-                <td>/api/auth/register</td>
-                <td>Register a new user</td>
-                <td class="text-center">❌</td>
-            </tr>
-            <tr>
-                <td>POST</td>
-                <td>/api/auth/login</td>
-                <td>Login and get JWT token</td>
-                <td class="text-center">❌</td>
-            </tr>
-            <tr>
-                <td>GET</td>
-                <td>/api/expense/</td>
-                <td>Get all expenses for user</td>
-                <td class="text-center">✅</td>
-            </tr>
-            <tr>
-                <td>GET</td>
-                <td>/api/expense/analysis</td>
-                <td>Get analysis of expenses for user</td>
-                <td class="text-center">✅</td>
-            </tr>
-            <tr>
-                <td>GET</td>
-                <td>/api/expense/getExpense/:id</td>
-                <td>Get single expenses for user</td>
-                <td class="text-center">✅</td>
-            </tr>
-            
-            <tr>
-                <td>POST</td>
-                <td>/api/expense/</td>
-                <td>Add a new expense</td>
-                <td class="text-center">✅</td>
-            </tr>
-            <tr>
-                <td>PUT</td>
-                <td>/api/expense/:id</td>
-                <td>Update an expense</td>
-                <td class="text-center">✅</td>
-            </tr>
-            <tr>
-                <td>DELETE</td>
-                <td>/api/expense/:id</td>
-                <td>Delete an expense</td>
-                <td class="text-center">✅</td>
-            </tr>
-        </tbody>
-    </table>
+## 🛣️ API Endpoints
 
-    #🔒 Authentication
-   Use the JWT token returned on login as a <code>Bearer Token</code> in the <code>Authorization</code> header for
-        all protected routes:
-    <code>Authorization: Bearer &lt;your-token&gt;</code>
+| Method | Endpoint                     | Description                       | Protected |
+|--------|------------------------------|-----------------------------------|-----------|
+| POST   | `/api/auth/register`         | Register a new user               | ❌        |
+| POST   | `/api/auth/login`            | Login and get JWT token           | ❌        |
+| GET    | `/api/expense/`              | Get all expenses for user         | ✅        |
+| GET    | `/api/expense/analysis`      | Get analysis of expenses          | ✅        |
+| GET    | `/api/expense/getExpense/:id`| Get a single expense by ID        | ✅        |
+| POST   | `/api/expense/`              | Add a new expense                 | ✅        |
+| PUT    | `/api/expense/:id`           | Update an expense                 | ✅        |
+| DELETE | `/api/expense/:id`           | Delete an expense                 | ✅        |
 
-    #🧪 Sample Expense Object
-    <code>{
-  title: "Apple",
-  category: "Food",
-  amount: 250,
-  date: "2025-05-26"
+
+## 🔒 Authentication
+
+Use the JWT token returned on login as a **Bearer Token** in the `Authorization` header for all protected routes:
+
+```http
+Authorization: Bearer <your-token>
+
+## 🧪 Sample Expense Object:
+{
+  "title": "Apple",
+  "category": "Food",
+  "amount": 250,
+  "date": "2025-05-26"
 }
-</code>
 
-    #🧑‍💻 Contributing
-    Contributions are welcome! Please fork the repository and submit a pull request.
+## 🧑‍💻 Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-    #📄 License
-    This project is licensed under the MIT License.
-
+## 📄 License
+This project is licensed under the MIT License.
