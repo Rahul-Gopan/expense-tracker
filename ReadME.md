@@ -1,32 +1,26 @@
 
-    <h1>🧾 Expense Tracker API</h1>
+    #🧾 Expense Tracker API
 
-    <p>A simple and secure <strong>Expense Tracker REST API</strong> built with <code>Node.js</code>,
+    A simple and secure <strong>Expense Tracker REST API</strong> built with <code>Node.js</code>,
         <code>Express</code>, and <code>MongoDB</code>. It allows users to manage their personal expenses by performing
-        CRUD operations with authentication.</p>
+        CRUD operations with authentication.
 
-    <hr />
-
-    <h2>📌 Features</h2>
-    <ul>
-        <li>🔐 User authentication (JWT)</li>
-        <li>➕ Add, edit, delete expenses</li>
-        <li>📊 Get expenses by category, date range, or user</li>
-        <li>📈 Calculate total, average, and price range</li>
-        <li>📁 MongoDB aggregation support</li>
-        <li>📦 RESTful API structure</li>
+    #📌 Features
+    🔐 User authentication (JWT)
+    ➕ Add, edit, delete expenses
+     📊 Get expenses by category, date range, or user
+     📈 Calculate total, average, and price range
+     📁 MongoDB aggregation support
+     📦 RESTful API structure
     </ul>
 
-    <h2>🚀 Tech Stack</h2>
-    <ul>
-        <li><strong>Backend:</strong> Node.js, Express.js</li>
-        <li><strong>Database:</strong> MongoDB + Mongoose</li>
-        <li><strong>Authentication:</strong> JWT</li>
-        <li><strong>Validation:</strong> express-validator or Joi (optional)</li>
-    </ul>
+    #🚀 Tech Stack
+    Backend: Node.js, Express.js
+    Database: MongoDB + Mongoose
+    Authentication: JWT
 
-    <h2>📁 Project Structure</h2>
-    <pre><code>expense-tracker/
+    #📁 Project Structure
+    <code>expense-tracker/
 ├── controllers/
 │   └── expenseController.js
 ├── database/
@@ -46,10 +40,10 @@
 ├── server.js
 ├── package.json
 └── README.md
-</code></pre>
+</code>
 
-    <h2>⚙️ Installation</h2>
-    <pre><code># Clone the repository
+    #⚙️ Installation
+    <code># Clone the repository
 git clone https://github.com/your-username/expense-tracker.git
 cd expense-tracker
 
@@ -58,21 +52,21 @@ npm install
 
 # Create a .env file and add your environment variables
 touch .env
-</code></pre>
+</code>
 
-    <h2>🛠️ Environment Variables</h2>
-    <pre><code>PORT=3000
+    #🛠️ Environment Variables
+    <code>PORT=3000
 MONGODB_URI=mongodb://localhost:PORT/expense-tracker
 JWT_SECRET=your_jwt_secret
-</code></pre>
+</code>
 
-    <h2>▶️ Run the Project</h2>
-    <pre><code># Start the server
+    #▶️ Run the Project
+    <code># Start the server
 npm run dev
-</code></pre>
-    <p>The server will start at <code>http://localhost:3000</code>.</p>
+The server will start at <code>http://localhost:3000
+</code>
 
-    <h2>🛣️ API Endpoints</h2>
+    #🛣️ API Endpoints
     <table>
         <thead>
             <tr>
@@ -135,23 +129,23 @@ npm run dev
         </tbody>
     </table>
 
-    <h2>🔒 Authentication</h2>
-    <p>Use the JWT token returned on login as a <code>Bearer Token</code> in the <code>Authorization</code> header for
-        all protected routes:</p>
-    <pre><code>Authorization: Bearer &lt;your-token&gt;</code></pre>
+    #🔒 Authentication
+   Use the JWT token returned on login as a <code>Bearer Token</code> in the <code>Authorization</code> header for
+        all protected routes:
+    <code>Authorization: Bearer &lt;your-token&gt;</code>
 
-    <h2>🧪 Sample Expense Object</h2>
-    <pre><code>{
+    #🧪 Sample Expense Object
+    <code>{
   title: "Apple",
   category: "Food",
   amount: 250,
   date: "2025-05-26"
 }
-</code></pre>
+</code>
 
-    <h2>🧑‍💻 Contributing</h2>
-    <p>Contributions are welcome! Please fork the repository and submit a pull request.</p>
+    #🧑‍💻 Contributing
+    Contributions are welcome! Please fork the repository and submit a pull request.
 
-    <h2>📄 License</h2>
-    <p>This project is licensed under the MIT License.</p>
+    #📄 License
+    This project is licensed under the MIT License.
 
