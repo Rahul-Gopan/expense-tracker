@@ -46,6 +46,7 @@ expense-tracker/
     ├── package.json
     └── README.md
 
+---
 
 ## ⚙️ Installation
 
@@ -56,6 +57,8 @@ cd expense-tracker
 
 # Install dependencies
 npm install
+
+---
 
 ## 🛠️ Environment Variables
 
@@ -69,6 +72,8 @@ JWT_SECRET=your_jwt_secret
 ## ▶️ Run the Project
 # Start the server
 npm run dev
+
+---
 
 ## 🛣️ API Endpoints
 
@@ -84,12 +89,16 @@ npm run dev
 | DELETE | `/api/expense/:id`           | Delete an expense                 | ✅        |
 
 
+---
+
 ## 🔒 Authentication
 
 Use the JWT token returned on login as a **Bearer Token** in the `Authorization` header for all protected routes:
 
 ```http
 Authorization: Bearer <your-token>
+
+---
 
 ## 🧪 Sample Expense Object:
 {
@@ -99,8 +108,13 @@ Authorization: Bearer <your-token>
   "date": "2025-05-26"
 }
 
+
+---
+
 ## 🧑‍💻 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
+
+---
 
 ## 📄 License
 This project is licensed under the MIT License.
