@@ -49,13 +49,12 @@ expense-tracker/
 
 ## ⚙️ Installation
 
-```bash
 # Clone the repository
-git clone https://github.com/your-username/expense-tracker.git
-cd expense-tracker
+- git clone https://github.com/Rahul-Gopan/expense-tracker.git
+- cd expense-tracker
 
 # Install dependencies
-npm install
+- npm install
 
 ---
 
@@ -63,7 +62,7 @@ npm install
 
 Create a `.env` file in the root directory and add the following:
 
-```env
+-env
 PORT=3000
 MONGODB_URI=mongodb://localhost:27017/expense-tracker
 JWT_SECRET=your_jwt_secret
@@ -94,7 +93,7 @@ npm run dev
 
 Use the JWT token returned on login as a **Bearer Token** in the `Authorization` header for all protected routes:
 
-```http
+- http
 Authorization: Bearer <your-token>
 
 ---
