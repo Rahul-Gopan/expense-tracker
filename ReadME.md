@@ -62,13 +62,12 @@ expense-tracker/
 
 Create a `.env` file in the root directory and add the following:
 
--env
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/expense-tracker
-JWT_SECRET=your_jwt_secret
+- PORT=3000
+- MONGODB_URI=mongodb://localhost:27017/expense-tracker
+- JWT_SECRET=your_jwt_secret
 
 ## ▶️ Run the Project
-# Start the server
+Start the server: 
 npm run dev
 
 ---
