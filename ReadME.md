@@ -21,7 +21,6 @@ A simple and secure **Expense Tracker REST API** built with `Node.js`, `Express`
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB + Mongoose
 - **Authentication:** JWT
-- **Validation:** express-validator or Joi (optional)
 
 ---
 ## 📁 Project Structure
